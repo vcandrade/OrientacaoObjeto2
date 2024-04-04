@@ -1,7 +1,5 @@
 package aula06.sobreposicao;
 
-import java.util.Scanner;
-
 public class MamiferoTeste {
 
 	public static void main(String[] args) {
