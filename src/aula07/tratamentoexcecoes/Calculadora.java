@@ -23,12 +23,10 @@ public class Calculadora {
 		} catch (ArithmeticException ae) {
 
 			System.out.println("Impossível dividir por 0");
-			System.out.println(ae.getMessage());
 
 		} catch (InputMismatchException ime) {
 
 			System.out.println("Informe apenas valores inteiros");
-			System.out.println(ime.getMessage());
 
 		} catch (Exception e) {
 
@@ -41,3 +39,15 @@ public class Calculadora {
 		}
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
