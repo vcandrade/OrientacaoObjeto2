@@ -5,8 +5,6 @@
  */
 package aula19.thread.exercicio;
 
-import javax.swing.JOptionPane;
-
 public class CronometroThread extends Thread {
 
     private CronometroWindow cronometroWindow;
@@ -21,17 +19,17 @@ public class CronometroThread extends Thread {
         
         try {
             
-            while(true) {
+            while(!isInterrupted()) {
 
                 this.cronometroWindow.getLblContador().setText(String.valueOf(cronometroWindow.getContador()));
                 this.cronometroWindow.setContador(cronometroWindow.getContador() + 1);
 
-                this.sleep(1000);
+                Thread.sleep(1000);
             }
             
         } catch (InterruptedException ex) {
         
-            JOptionPane.showMessageDialog(null, "Erro: " + ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+            Thread.currentThread().interrupt();
         }
     }
 }

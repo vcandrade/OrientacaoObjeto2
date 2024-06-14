@@ -55,7 +55,7 @@ public class CronometroWindow extends JFrame {
 	
 	private void pararContagem() {
 		
-		this.cronometroThread.suspend();
+		this.cronometroThread.interrupt();
 		
 		this.btnIniciar.setEnabled(true);
         this.btnParar.setEnabled(false);
@@ -63,7 +63,7 @@ public class CronometroWindow extends JFrame {
 
 	private void initComponents() {
 
-		setTitle("Cron\u00F4metro");
+		setTitle("Cronômetro");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 562, 389);
 		contentPane = new JPanel();
